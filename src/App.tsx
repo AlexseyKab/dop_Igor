@@ -14,7 +14,7 @@ function App() {
   const [show, setShow] = useState<Array<ShowType>>([])
 
   const useShowUp = () => {
-      //useEffect
+
       fetch('https://jsonplaceholder.typicode.com/todos')
           .then(response => response.json())
           .then(json => setShow(json))
