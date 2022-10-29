@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import {Button} from "./components/Button";
 
@@ -14,11 +14,11 @@ function App() {
   const [show, setShow] = useState<Array<ShowType>>([])
 
   const useShowUp = () => {
-   /* useEffect(() => {*/
+
       fetch('https://jsonplaceholder.typicode.com/todos')
           .then(response => response.json())
           .then(json => setShow(json))
-  /*  }, [])*/
+
   }
 
   const clearMeHandler = () => {
